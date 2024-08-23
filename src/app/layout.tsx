@@ -2,7 +2,6 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { MenuProvider } from "./Context/MenuContext";
-import Template from "./template";
 
 export const metadata = {
   title: "Create Next App",
@@ -19,9 +18,7 @@ export default function RootLayout({ children }) {
       <body className='min-h-screen min-w-screen bg-[#010725] overflow-x-hidden'>
         <MenuProvider>
           <Header />
-        <Template>
         {children}
-        </Template>
         </MenuProvider>
         <Footer />
       </body>

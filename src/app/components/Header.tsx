@@ -4,12 +4,10 @@ import Navbar from './Navbar'
 import Button from './Button'
 import Logo from './Logo'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { dm_Sans } from '../font'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { useState } from 'react'
 import { Button as Btn } from '@/components/ui/button'
-import { AnimatePresence } from 'framer-motion'
 
 type LinkType = {
   id: number;
@@ -19,26 +17,6 @@ type LinkType = {
 
 const Header = () => {
 
-
-  const menuVars = {
-    intial: {
-      scaleY: 0,
-    },
-    animate: {
-      scaleY: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.12, 0, 0.38, 0]
-      }
-    },
-    exit: {
-      scaleY: 0,
-      transition: {
-        duration: 0.5,
-        ease: [0.12, 1, 0.36, 1]
-      }
-    }
-  }
 
   const links: LinkType[] = [
     {
@@ -91,15 +69,9 @@ const Header = () => {
             <RxHamburgerMenu className=" text-white text-2xl lg:hidden" onClick={() => setMenu((prev) => !prev)} />
           </div>
         </div>}
-        <AnimatePresence>
           {
             menu && (
-              <motion.div
-                variants={menuVars}
-                initial='intial'
-                animate='animate'
-                exit='exit'
-                className="fixed top-0 left-0 w-full h-full origin-top py-[4rem]">
+              <div className="fixed top-0 left-0 w-full h-full origin-top py-[4rem]">
                 <div className='flex justify-between px-12'>
                   <Logo />
                   <div className=''>
@@ -124,10 +96,9 @@ const Header = () => {
                     Download
                   </Btn>
                 </div>
-              </motion.div>
+              </div>
             )
           }
-        </AnimatePresence>
       </div>
     </div>
   )
