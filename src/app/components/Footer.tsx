@@ -28,17 +28,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=' w-full flex justify-between mb-[4rem]'>
+      <div className=' sm:w-full flex flex-col md:flex-row justify-between mb-[4rem]'>
         <FooterNav />
-        <div className=' lg:w-[27rem] xl:w-[32rem] w-[22rem] h-[17.6rem] rounded-3xl px-[3rem] py-[2rem] lg:space-y-4 text-white' style={{ backgroundColor: 'hsla(360, 100%, 100%, 0.1)' }}>
+        <div className=' lg:w-[27rem] xl:w-[32rem] md:w-[22rem] md:h-[17.6rem] mt-4 rounded-3xl sm:px-[3rem] px-[1rem] sm:py-[2rem] py-[1rem] lg:space-y-4 text-white' style={{ backgroundColor: 'hsla(360, 100%, 100%, 0.1)' }}>
           <h1 className=' font-bold'>DOWNLOAD OUR APPLICATION</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nulla integer </p>
           <div className='flex lg:flex-row flex-col lg:justify-between font-light'>
-            <div className=' xl:w-[12rem] lg:w-[9rem] xl:h-[4.4rem] lg:h-[3.4rem] h-[2.5rem] bg-[#0328EE] rounded-full flex items-center justify-center space-x-[1rem] lg:my-[2rem] my-[1rem] cursor-pointer'>
+            <div className=' xl:w-[12rem] lg:w-[9rem] xl:h-[4.4rem] lg:h-[3.4rem] h-[2.5rem] bg-[#0328EE] rounded-full flex items-center justify-center space-x-[1rem] lg:my-[2rem] my-[0.4rem] sm:my-[1rem] cursor-pointer'>
               <ImAppleinc className=' text-white text-2xl' />
               <p className=' text-white font-bold'>APP STORE</p>
             </div>
-            <div className=' xl:w-[12rem] lg:w-[9rem] xl:h-[4.4rem] lg:h-[3.4rem] h-[2.5rem] bg-[#0328EE] rounded-full flex items-center justify-center space-x-[1rem] lg:my-[2rem] my-[1rem] cursor-pointer'>
+            <div className=' xl:w-[12rem] lg:w-[9rem] xl:h-[4.4rem] lg:h-[3.4rem] h-[2.5rem] bg-[#0328EE] rounded-full flex items-center justify-center space-x-[1rem] lg:my-[2rem] my-[0.4rem] sm:my-[1rem] cursor-pointer'>
               <IoLogoGooglePlaystore className=' text-white text-2xl' />
               <p className=' text-white font-bold'>PLAY STORE</p>
             </div>

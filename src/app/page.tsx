@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { DeviceFrameset } from "react-device-frameset";
 import 'react-device-frameset/styles/marvel-devices.min.css';
 import { dm_Sans } from "./font";
@@ -13,40 +12,9 @@ import DownloadAndroidCard from "./components/DownloadAndroidCard";
 
 export default function Home() {
 
-  const data = [
-    {
-      id: 1,
-      name: 'John Doe',
-    },
-    {
-      id: 2,
-      name: 'John Doe',
-    },
-    {
-      id: 3,
-      name: 'John Doe',
-    },
-    {
-      id: 4,
-      name: 'John Doe',
-    },
-    {
-      id: 5,
-      name: 'John Doe',
-    },
-    {
-      id: 6,
-      name: 'John Doe',
-    },
-    {
-      id: 7,
-      name: 'John Doe',
-    }
-  ]
-
   return (
     <div className="w-full overflow-x-hidden">
-      <div className="h-[42rem] w-[42rem] bg-[#010D50] absolute top-[-11rem] left-[-7rem] rounded-full z-[-10] blur-2xl opacity-30 p-10"
+      <div className="h-[42rem] w-[42rem] bg-[#010D50] md:block hidden absolute top-[-11rem] left-[-7rem] rounded-full z-[-10] blur-2xl opacity-30 p-10"
       >
       </div>
       <div className="h-[43rem] w-[43rem] bg-[#0328EE] absolute top-[20rem] right-0 rounded-full z-[-10] blur-2xl opacity-20 p-10"
@@ -54,12 +22,12 @@ export default function Home() {
       </div>
       <div className="flex lg:flex-row flex-col justify-between">
         <div className="text-white lg:w-[60%] lg:pl-32 px-10 space-y-1 mt-[3rem] lg:mt-[10rem]">
-          <h1 className=" 2xl:text-7xl lg:text-5xl md:text-7xl font-semibold">Buy, trade, and hold</h1>
-          <h1 className="2xl:text-7xl lg:text-5xl md:text-7xl font-semibold">350+ cryptocurrencies</h1>
-          <p className=" text-md w-[70%]" style={{ marginTop: '2rem' }}>Finance refers to monetary resources and to the study and discipline of money, currency and capital assets.
+          <h1 className=" 2xl:text-7xl lg:text-5xl md:text-7xl text-3xl font-semibold">Buy, trade, and hold</h1>
+          <h1 className="2xl:text-7xl lg:text-5xl md:text-7xl text-3xl font-semibold">350+ cryptocurrencies</h1>
+          <p className=" text-md md:w-[70%]" style={{ marginTop: '2rem' }}>Finance refers to monetary resources and to the study and discipline of money, currency and capital assets.
             As a subject of study, it is related to but distinct from economics, which is the study of the production, distribution, and consumption of goods and services
           </p>
-          <div className={`flex ${dm_Sans.className}  md:flex-col lg:flex-row font-bold lg:space-x-5 md:space-y-5 lg:space-y-0`} style={{ marginTop: '3rem' }}>
+          <div className={`flex ${dm_Sans.className}  flex-col lg:flex-row font-bold lg:space-x-5 space-y-5 lg:space-y-0`} style={{ marginTop: '3rem' }}>
             <button className={" lg:w-52 h-16 bg-[#0328EE] rounded-full text-white"}>DOWNLOAD APP</button>
             <button className=" bg-slate-800 lg:w-52 h-16 rounded-full text-white">VIEW PRICING</button>
           </div>
@@ -71,8 +39,15 @@ export default function Home() {
             </video>
           </DeviceFrameset>
         </div>
-        <div className="p-14 lg:hidden">
+        <div className="p-14 max-sm:hidden sm:block lg:hidden">
           <DeviceFrameset device="iPad Mini" height={550}>
+            <video className=" object-cover h-full w-full" autoPlay loop muted>
+              <source src="/device_video.mp4" type="video/mp4" />
+            </video>
+          </DeviceFrameset>
+        </div>
+        <div className="p-14 sm:hidden">
+          <DeviceFrameset device="iPad Mini" height={300} width={250}>
             <video className=" object-cover h-full w-full" autoPlay loop muted>
               <source src="/device_video.mp4" type="video/mp4" />
             </video>
@@ -85,20 +60,20 @@ export default function Home() {
 
       {/*Card Section */}
 
-      <div className={`flex flex-col items-center text-white ${dm_Sans.className} mt-32 relative`}>
+      <div className={`flex flex-col items-center text-white ${dm_Sans.className} md:mt-32 mt-16 relative md:px-0 px-10`}>
         <div className="h-[43rem] w-[43rem] bg-[#0326eec2] absolute top-[5rem] right-[10rem] rounded-full z-[-10] blur-2xl opacity-20 p-10"
         >
         </div>
-        <h1 className=" text-[3rem] font-semibold">Build your crypto portfolio</h1>
+        <h1 className=" md:text-[3rem] text-[2rem] font-semibold">Build your crypto portfolio</h1>
         <p className="mt-6 mb-1">
           Discover the top 10 crypto portfolio trackers.
         </p>
         <p className="mb-6">Effortlessly manage and optimize your digital assets for maximum returns.</p>
       </div>
 
-      <div className={`flex justify-between 2xl:px-28 xl:px-24 lg:px-16 px-6 ${dm_Sans.className} my-14`}>
+      <div className={`flex md:flex-row flex-col justify-between 2xl:px-28 xl:px-24 lg:px-16 px-6 ${dm_Sans.className} my-14`}>
         <div className=" space-y-[1rem]">
-          <div className="bg-[#010D50] 2xl:w-[20.5rem] xl:w-[19rem] lg:w-[17rem] w-[12rem] h-[18rem] rounded-[2rem] py-6 lg:py-10 text-white space-y-4 2xl:px-5 xl:px-4 lg:px-4 px-2">
+          <div className="bg-[#010D50] 2xl:w-[20.5rem] xl:w-[19rem] lg:w-[17rem] md:w-[12rem] md:h-[18rem] rounded-[2rem] py-6 lg:py-10 text-white space-y-4 2xl:px-5 xl:px-4 lg:px-4 px-2">
             <div className=" h-16 w-16 bg-[#0328EE] rounded-[1.2rem] flex items-center justify-center">
               <img src="/arrow.png" alt="" className=" block" />
             </div>
@@ -108,7 +83,7 @@ export default function Home() {
               architecture, design, media and technology.
             </p>
           </div>
-          <div className="bg-[#010D50] 2xl:w-[20.5rem] xl:w-[19rem] lg:w-[17rem] w-[12rem] h-[18rem] rounded-[2rem] py-6 lg:py-10 text-white space-y-4 2xl:px-5 xl:px-4 lg:px-4 px-2">
+          <div className="bg-[#010D50] 2xl:w-[20.5rem] xl:w-[19rem] lg:w-[17rem] md:w-[12rem] md:h-[18rem] rounded-[2rem] py-6 lg:py-10 text-white space-y-4 2xl:px-5 xl:px-4 lg:px-4 px-2">
             <div className=" h-16 w-16 bg-[#0328EE] rounded-[1.2rem] flex items-center justify-center">
               <img src="/wallet.png" alt="" className="block" />
             </div>
@@ -119,7 +94,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="bg-[#0328EE] 2xl:w-[29.5rem] xl:w-[26rem] md:w-[20rem] h-[37rem] rounded-[2rem] flex flex-col justify-between items-center overflow-hidden">
+        <div className="bg-[#0328EE] 2xl:w-[29.5rem] xl:w-[26rem] md:w-[20rem] h-[37rem] md:my-0 my-5 rounded-[2rem] flex flex-col justify-between items-center overflow-hidden">
           <div className={`${dm_Sans.className} text-white px-8 pt-8 space-y-6`}>
             <h1 className="font-bold">iOS & Android App</h1>
             <p >
@@ -139,7 +114,7 @@ export default function Home() {
           </div>
         </div>
         <div className=" space-y-[1rem]">
-          <div className="bg-[#010D50] 2xl:w-[20.5rem] xl:w-[19rem] lg:w-[17rem] w-[12rem] h-[18rem] rounded-[2rem] py-6 lg:py-10 text-white space-y-4 2xl:px-5 xl:px-4 lg:px-4 px-2">
+          <div className="bg-[#010D50] 2xl:w-[20.5rem] xl:w-[19rem] lg:w-[17rem] md:w-[12rem] md:h-[18rem] rounded-[2rem] py-6 lg:py-10 text-white space-y-4 2xl:px-5 xl:px-4 lg:px-4 px-2">
             <div className=" h-16 w-16 bg-[#0328EE] rounded-[1.2rem] flex items-center justify-center">
               <img src="/graph-bar.png" alt="" className="block" />
             </div>
@@ -149,7 +124,7 @@ export default function Home() {
               shares, indices, commodities, currencies, ETFs, bonds, and futures.
             </p>
           </div>
-          <div className="bg-[#010D50] 2xl:w-[20.5rem] xl:w-[19rem] lg:w-[17rem] w-[12rem] h-[18rem] rounded-[2rem] py-6 lg:py-10 text-white space-y-4 2xl:px-5 xl:px-4 lg:px-4 px-2">
+          <div className="bg-[#010D50] 2xl:w-[20.5rem] xl:w-[19rem] lg:w-[17rem] md:w-[12rem] md:h-[18rem] rounded-[2rem] py-6 lg:py-10 text-white space-y-4 2xl:px-5 xl:px-4 lg:px-4 px-2">
             <div className=" h-16 w-16 bg-[#0328EE] rounded-[1.2rem] flex items-center justify-center">
               <img src="/loop.png" alt="" className="block" />
             </div>
@@ -205,7 +180,7 @@ export default function Home() {
 
       {/*daily Rewards Section laptop*/}
 
-      <div className="flex text-white justify-between pl-28 mb-[13rem]">
+      <div className="flex md:flex-row flex-col text-white justify-between lg:pl-32 max-sm:pl-10 md:mb-[13rem]">
         <div className={`flex flex-col mt-24 ${dm_Sans.className} justify-end pb-[2rem]`}>
           <div>
             <h1 className=" xl:text-[3.3rem] lg:text-[2.5rem] md:text-[1.8rem] font-medium">Earn daily rewards on</h1>
@@ -234,8 +209,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-[50%] overflow-hidden pl-[4rem]">
+        <div className="w-[50%] hidden md:block overflow-hidden pl-[4rem]">
           <DeviceFrameset device="MacBook Pro" width={600} height={600}>
+            <img src="/fin.png" className=" h-full" />
+          </DeviceFrameset>
+        </div>
+        <div className=" block sm:hidden overflow-hidden ">
+          <DeviceFrameset device="iPad Mini" width={270} height={350}>
             <img src="/fin.png" className=" h-full" />
           </DeviceFrameset>
         </div>
@@ -243,25 +223,24 @@ export default function Home() {
 
       {/*Explore Section*/}
 
-      <div className=" h-[37.5rem] w-full bg-[#0328EE] relative flex overflow-hidden pr-[14rem] mb-[5rem]">
+      <div className=" md:h-[37.5rem] h-[45rem] w-full bg-[#0328EE] relative flex flex-col md:flex-row overflow-hidden md:pr-[14rem] mb-[5rem] max-sm:pt-5">
         <div className="absolute top-0 bg-[#010725] w-full h-[10rem]"></div>
-        <div className={`flex flex-col justify-center items w-3/6 ${dm_Sans.className} text-white mt-[4rem] pl-[3rem]`}>
-          <h1 className=" text-4xl font-semibold mt-[6rem] ">Explore endless possibilities</h1>
-          <h1 className=" text-4xl font-semibold mb-[2rem] ">with FinanceFlow</h1>
-          <p className="text-sm w-[80%] mb-[0.3rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <div className={`flex flex-col md:justify-center text-center md:w-3/6 ${dm_Sans.className} text-white mt-[4rem] md:pl-[3rem]`}>
+          <h1 className=" text-2xl md:text-4xl font-semibold mt-[6rem] ">Explore endless possibilities</h1>
+          <h1 className=" text-2xl md:text-4xl font-semibold mb-[2rem] ">with FinanceFlow</h1>
+          <p className="text-sm md:w-[80%] mb-[0.3rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
-          <p className="text-sm w-[80%]">
+          <p className="text-sm md:w-[80%]">
             Feugiat nulla suspendisse tortor aene.
           </p>
-          <button className=" bg-white w-[10rem] h-[4rem] block text-[#0328EE] text-center rounded-full text-sm font-bold mt-[2rem]">DOWNLOAD APP</button>
+          <button className=" bg-white md:w-[10rem] h-[4rem] block text-[#0328EE] text-center rounded-full text-sm font-bold mt-[2rem]">DOWNLOAD APP</button>
         </div>
         <DualMobTwo />
       </div>
 
 
       {/*Nav slides Section*/}
-
-      <div className={`flex px-28 ${dm_Sans.className} items-center justify-between my-[2rem] relative`}>
+      <div className={`flex flex-col md:flex-row md:px-28 px-10 ${dm_Sans.className} md:items-center md:justify-between my-[2rem] relative`}>
         <div className="h-[42rem] w-[42rem] bg-[#0326eeb8] absolute top-[7rem] left-[7rem] rounded-full z-[-10] blur-[5rem] opacity-40 p-10"
         ></div>
         <h1 className=" text-white text-3xl font-semibold">What our users say?</h1>
@@ -271,7 +250,7 @@ export default function Home() {
 
       {/*Get started today*/}
 
-      <div className="flex md:flex-col lg:flex-row justify-between 2xl:px-28 xl:px-24 lg:px-16 px-10">
+      <div className="flex flex-col lg:flex-row justify-between 2xl:px-28 xl:px-24 lg:px-16 px-10">
         <div className={` lg:h-[25rem] flex flex-col lg:items-stretch items-center ${dm_Sans.className}`}>
           <h1 className=" xl:text-3xl lg:text-2xl text-white font-semibold mb-[1rem]">Get started today</h1>
           <p className=" xl:text-sm lg:text-xs text-white font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -322,7 +301,7 @@ export default function Home() {
 
       {/*Download our app Section*/}
 
-      <div className=" 2xl:px-28 xl:px-24 lg:px-16 flex flex-col lg:flex-row md:items-center lg:items-start lg:justify-between text-white mt-[7rem] mb-[2rem]">
+      <div className=" 2xl:px-28 xl:px-24 lg:px-16 px-5 flex flex-col lg:flex-row items-center lg:items-start lg:justify-between text-white mt-[7rem] mb-[2rem]">
         <h1 className=" font-semibold text-3xl">Download our app</h1>
         <div className=" text-center">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>

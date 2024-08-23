@@ -6,7 +6,7 @@ import 'react-device-frameset/styles/marvel-devices.min.css'
 
 const DownloadIosCard = () => {
   return (
-    <div className={` bg-[#010D50] 2xl:w-[35.3rem] xl:w-[30rem] lg:w-[24rem] h-[48.3rem] rounded-3xl overflow-hidden lg:px-[3rem] md:px-[1.5rem] ${dm_Sans.className} py-[2rem] md:space-y-[2rem] lg:space-y-[1rem]`}>
+    <div className={` bg-[#010D50] 2xl:w-[35.3rem] xl:w-[30rem] lg:w-[24rem] h-[48.3rem] rounded-3xl overflow-hidden lg:px-[3rem] md:px-[1.5rem] px-[1rem] ${dm_Sans.className} py-[2rem] md:space-y-[2rem] lg:space-y-[1rem]`}>
         <h1 className=' text-white xl:text-[3rem] text-[2rem] font-medium'>Download for iOS</h1>
         <p className='text-white font-light'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nulla integer in pellentesque tortor semper elementum. Felis.</p>
         <div>
