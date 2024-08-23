@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { dm_Sans } from '../font'
 
 const FeaturedCompanies = () => {
@@ -33,7 +34,7 @@ const FeaturedCompanies = () => {
                 {
                     comapnies.map((company, index) => (
                         <div key={index} className='flex justify-center items-center space-x-4'>
-                            <img src={company.img} alt={company.name} className=' w-12 h-12' />
+                            <Image src={company.img} alt={company.name} width={48} height={48} />
                             <p>{company.name}</p>
                         </div>
                     ))
