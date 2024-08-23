@@ -132,8 +132,8 @@ export default function Page() {
                     <div className={` flex flex-col lg:flex-row md:items-center md:justify-center lg:justify-between ${dm_Sans.className}`}>
                         <h1 className=" text-white font-semibold xl:text-[4rem] text-[4.5rem]">Blog</h1>
                         <div className=" text-white xl:text-sm lg:text-xs font-light md:text-center lg:text-left">
-                            <p>It's the place to launch your ideas and discover your next favorite product.</p>
-                            <p> We're a welcoming and supportive community.</p>
+                            <p>It&apos;s the place to launch your ideas and discover your next favorite product.</p>
+                            <p> We&apos;re a welcoming and supportive community.</p>
                         </div>
                     </div>
                     <div className='w-full bg-[#010D50] md:h-[21rem] md:rounded-l-3xl rounded-3xl flex max-md:flex max-md:flex-col justify-between relative'>

@@ -285,8 +285,8 @@ export default function Home() {
         <div className={` flex md:flex-col lg:flex-row md:items-center md:justify-center lg:justify-between ${dm_Sans.className}`}>
           <h1 className=" text-white font-semibold xl:text-3xl lg:text-2xl">Browse our latest news</h1>
           <div className=" text-white xl:text-sm lg:text-xs font-light md:text-center lg:text-left">
-            <p>It's the place to launch your ideas and discover your next favorite product.</p>
-            <p> We're a welcoming and supportive community.</p>
+            <p>It&apos;s the place to launch your ideas and discover your next favorite product.</p>
+            <p> We&apos;re a welcoming and supportive community.</p>
           </div>
         </div>
         <div className=" flex flex-col space-y-[2rem] lg:space-y-0 lg:flex-row justify-between">

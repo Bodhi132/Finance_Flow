@@ -50,48 +50,53 @@ const SlidesScroll = () => {
     }
   ]
 
-  const outerContainerRef = useRef<HTMLDivElement>(null);
-  const innerContainerRefs = useRef<Array<React.RefObject<HTMLDivElement> | null>>([]);
+  const outerContainerRef = useRef(null);
+  const innerContainerRefs = useRef([]);
 
   const [focusedIndex, setFocusedIndex] = useState(0);
 
+  useEffect(() => {
+    // Initialize refs array
+    innerContainerRefs.current = data.map(() => React.createRef());
+  }, [data]);
+
   const handleScroll = () => {
-    console.log(outerContainerRef.current.scrollLeft, outerContainerRef.current.scrollWidth);
-    const ind = Math.trunc(outerContainerRef.current.scrollWidth / innerContainerRefs.current[0].current.scrollWidth)
-    const focusedIndex = Math.round((outerContainerRef.current.scrollLeft / outerContainerRef.current.scrollWidth) * ind);
-    setFocusedIndex(focusedIndex);
-  }
+    if (outerContainerRef.current && innerContainerRefs.current[0].current) {
+      const scrollLeft = outerContainerRef.current.scrollLeft;
+      const scrollWidth = outerContainerRef.current.scrollWidth;
+      const itemWidth = innerContainerRefs.current[0].current.scrollWidth;
+      const ind = Math.trunc(scrollWidth / itemWidth);
+      const focusedIndex = Math.round((scrollLeft / scrollWidth) * ind);
+      setFocusedIndex(focusedIndex);
+    }
+  };
 
   return (
     <>
-      <div className={`flex w-full overflow-x-scroll scroll-snap-x scrollable_content mb-[8rem] relative`} ref={outerContainerRef} onScroll={() => {
-        handleScroll();
-      }}>
-        {
-          data.map((item, ind) => {
-            innerContainerRefs.current[ind] = useRef(null);
-            return (
-              <div
-                key={ind}
-                className={`min-w-[26rem] h-[14rem] rounded-3xl py-[2rem] px-[2rem] mx-[1.5rem] flex flex-col space-y-[2rem] text-white bg-[#010D50] ${focusedIndex === ind ? ' opacity-100' : ' opacity-60'} ${dm_Sans.className}`}
-                ref={innerContainerRefs.current[ind]}
-              >
-                <p className=' text-sm'>
-                  {item.info}
-                </p>
-                <div className='flex space-x-[1rem] items-center'>
-                  <div className=' w-[3.6rem] h-[3.6rem] rounded-full overflow-hidden'>
-                    <img src={item.imgPath} alt="" className='w-full h-full' />
-                  </div>
-                  <div>
-                    <h1>{item.name}</h1>
-                    <h2>Role, Company</h2>
-                  </div>
-                </div>
+      <div
+        className="flex w-full overflow-x-scroll scroll-snap-x scrollable_content mb-[8rem] relative"
+        ref={outerContainerRef}
+        onScroll={handleScroll}
+      >
+        {data.map((item, ind) => (
+          <div
+            key={ind}
+            className={`min-w-[26rem] h-[14rem] rounded-3xl py-[2rem] px-[2rem] mx-[1.5rem] flex flex-col space-y-[2rem] text-white bg-[#010D50] ${focusedIndex === ind ? 'opacity-100' : 'opacity-60'
+              }`}
+            ref={innerContainerRefs.current[ind]}
+          >
+            <p className="text-sm">{item.info}</p>
+            <div className="flex space-x-[1rem] items-center">
+              <div className="w-[3.6rem] h-[3.6rem] rounded-full overflow-hidden">
+                <img src={item.imgPath} alt="" className="w-full h-full" />
               </div>
-            );
-          })
-        }
+              <div>
+                <h1>{item.name}</h1>
+                <h2>Role, Company</h2>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   )
