@@ -60,7 +60,7 @@ const pricing = () => {
                         </ul>
                     </div>
                     <div>
-                        <button className=' text-center w-full bg-[#0328EE] mt-[2rem] py-[1rem] rounded-full'>CONTACT US</button>
+                        <button className=' text-center w-full bg-[#0328EE] hover:bg-[#031FB4] cursor-pointer mt-[2rem] py-[1rem] rounded-full'>CONTACT US</button>
                     </div>
                 </div>
                 <div className='h-[38.3rem] w-[24rem] bg-[#010D50] rounded-3xl py-[2rem] px-[2rem] mt-[1rem]'>
@@ -79,7 +79,7 @@ const pricing = () => {
                         </ul>
                     </div>
                     <div>
-                        <button className=' text-center w-full bg-[#0328EE] mt-[2rem] py-[1rem] rounded-full'>CONTACT US</button>
+                        <button className=' text-center w-full bg-[#0328EE] hover:bg-[#031FB4] cursor-pointer mt-[2rem] py-[1rem] rounded-full'>CONTACT US</button>
                     </div>
                 </div>
                 <div className='h-[38.3rem] w-[24rem] bg-[#010D50] rounded-3xl py-[2rem] px-[2rem] mt-[1rem]'>
@@ -98,7 +98,7 @@ const pricing = () => {
                         </ul>
                     </div>
                     <div>
-                        <button className=' text-center w-full bg-[#0328EE] mt-[2rem] py-[1rem] rounded-full'>CONTACT US</button>
+                        <button className=' text-center w-full bg-[#0328EE] hover:bg-[#031FB4] cursor-pointer mt-[2rem] py-[1rem] rounded-full'>CONTACT US</button>
                     </div>
                 </div>
             </div>

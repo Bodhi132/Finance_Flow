@@ -17,13 +17,13 @@ const Footer = () => {
           <p className=' text-white text-lg'>FinanceFlow</p>
         </div>
         <div className=' flex space-x-4'>
-          <div className=' h-[2.3rem] w-[2.3rem] rounded-full flex items-center justify-center' style={{ backgroundColor: 'hsla(360, 100%, 100%, 0.5)' }}>
+          <div className=' h-[2.3rem] w-[2.3rem] rounded-full flex items-center justify-center cursor-pointer' style={{ backgroundColor: 'hsla(360, 100%, 100%, 0.5)' }}>
             <FaInstagram className='block text-white' />
           </div>
-          <div className=' h-[2.3rem] w-[2.3rem] rounded-full flex items-center justify-center' style={{ backgroundColor: 'hsla(360, 100%, 100%, 0.5)' }}>
+          <div className=' h-[2.3rem] w-[2.3rem] rounded-full flex items-center justify-center cursor-pointer' style={{ backgroundColor: 'hsla(360, 100%, 100%, 0.5)' }}>
             <FaFacebookSquare className='block text-white' />
           </div>
-          <div className=' h-[2.3rem] w-[2.3rem] rounded-full flex items-center justify-center' style={{ backgroundColor: 'hsla(360, 100%, 100%, 0.5)' }}>
+          <div className=' h-[2.3rem] w-[2.3rem] rounded-full flex items-center justify-center cursor-pointer' style={{ backgroundColor: 'hsla(360, 100%, 100%, 0.5)' }}>
             <FaLinkedinIn className='block text-white' />
           </div>
         </div>
@@ -34,11 +34,11 @@ const Footer = () => {
           <h1 className=' font-bold'>DOWNLOAD OUR APPLICATION</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nulla integer </p>
           <div className='flex lg:flex-row flex-col lg:justify-between font-light'>
-            <div className=' xl:w-[12rem] lg:w-[9rem] xl:h-[4.4rem] lg:h-[3.4rem] h-[2.5rem] bg-[#0328EE] rounded-full flex items-center justify-center space-x-[1rem] lg:my-[2rem] my-[0.4rem] sm:my-[1rem] cursor-pointer'>
+            <div className=' xl:w-[12rem] lg:w-[9rem] xl:h-[4.4rem] lg:h-[3.4rem] h-[2.5rem] bg-[#0328EE] rounded-full flex items-center justify-center space-x-[1rem] lg:my-[2rem] my-[0.4rem] sm:my-[1rem] hover:bg-[#031FB4] cursor-pointer'>
               <ImAppleinc className=' text-white text-2xl' />
               <p className=' text-white font-bold'>APP STORE</p>
             </div>
-            <div className=' xl:w-[12rem] lg:w-[9rem] xl:h-[4.4rem] lg:h-[3.4rem] h-[2.5rem] bg-[#0328EE] rounded-full flex items-center justify-center space-x-[1rem] lg:my-[2rem] my-[0.4rem] sm:my-[1rem] cursor-pointer'>
+            <div className=' xl:w-[12rem] lg:w-[9rem] xl:h-[4.4rem] lg:h-[3.4rem] h-[2.5rem] bg-[#0328EE] rounded-full flex items-center justify-center space-x-[1rem] lg:my-[2rem] my-[0.4rem] sm:my-[1rem] hover:bg-[#031FB4] cursor-pointer'>
               <IoLogoGooglePlaystore className=' text-white text-2xl' />
               <p className=' text-white font-bold'>PLAY STORE</p>
             </div>

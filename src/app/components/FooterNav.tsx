@@ -44,7 +44,7 @@ const FooterNav = () => {
                 {
                     links.map((link) => (
                         <li key={link.id}>
-                            <Link href={`/${link.name.toLowerCase()}`} className={`${dm_Sans.className} text-white text-md`}>
+                            <Link href={`/${link.name !== 'HOME' ? link.name.toLowerCase() :''}`} className={`${dm_Sans.className} text-white text-md`}>
                                 {link.name}
                             </Link>
                         </li>

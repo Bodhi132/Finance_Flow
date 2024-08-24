@@ -11,7 +11,7 @@ const DownloadAndroidCard = () => {
         <h1 className=' text-white xl:text-[3rem] text-[2rem] font-medium'>Download for Android</h1>
         <p className='text-white font-light'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nulla integer in pellentesque tortor semper elementum. Felis.</p>
         <div>
-            <div className=' w-[12rem] h-[4.4rem] bg-[#0328EE] rounded-full flex items-center justify-center space-x-[1rem] my-[2rem]'>
+            <div className=' w-[12rem] h-[4.4rem] bg-[#0328EE] hover:bg-[#031FB4] cursor-pointer rounded-full flex items-center justify-center space-x-[1rem] my-[2rem]'>
                 <IoLogoGooglePlaystore className=' text-white text-2xl'/>
                 <p className=' text-white font-bold'>PLAY STORE</p>
             </div>

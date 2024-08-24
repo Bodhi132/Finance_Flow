@@ -28,8 +28,8 @@ export default function Home() {
             As a subject of study, it is related to but distinct from economics, which is the study of the production, distribution, and consumption of goods and services
           </p>
           <div className={`flex ${dm_Sans.className}  flex-col lg:flex-row font-bold lg:space-x-5 space-y-5 lg:space-y-0`} style={{ marginTop: '3rem' }}>
-            <button className={" lg:w-52 h-16 bg-[#0328EE] rounded-full text-white"}>DOWNLOAD APP</button>
-            <button className=" bg-slate-800 lg:w-52 h-16 rounded-full text-white">VIEW PRICING</button>
+            <button className={" lg:w-52 h-16 bg-[#0328EE] hover:bg-[#031FB4] cursor-pointer rounded-full text-white"}>DOWNLOAD APP</button>
+            <button className=" bg-slate-800 hover:bg-[#0328EE] cursor-pointer lg:w-52 h-16 rounded-full text-white">VIEW PRICING</button>
           </div>
         </div>
         <div className=" lg:p-16 lg:w-[40%] lg:block hidden overflow-x-hidden">
@@ -137,7 +137,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full flex justify-center mt-[4rem] mb-[8rem]">
-        <button className={`w-[12rem] h-[3.5rem] rounded-full bg-[#0328EE] flex justify-center items-center ${dm_Sans.className} text-white font-semibold`}>
+        <button className={`w-[12rem] h-[3.5rem] rounded-full bg-[#0328EE] hover:bg-[#031FB4] cursor-pointer flex justify-center items-center ${dm_Sans.className} text-white font-semibold`}>
           DOWLOAD APP
         </button>
       </div>
@@ -233,7 +233,7 @@ export default function Home() {
           <p className="text-sm md:w-[80%]">
             Feugiat nulla suspendisse tortor aene.
           </p>
-          <button className=" bg-white md:w-[10rem] h-[4rem] block text-[#0328EE] text-center rounded-full text-sm font-bold mt-[2rem]">DOWNLOAD APP</button>
+          <button className=" bg-white md:w-[10rem] h-[4rem] block text-[#0328EE] hover:bg-[#031FB4] cursor-pointer text-center rounded-full text-sm font-bold mt-[2rem]">DOWNLOAD APP</button>
         </div>
         <DualMobTwo />
       </div>
@@ -244,7 +244,7 @@ export default function Home() {
         <div className="h-[42rem] w-[42rem] bg-[#0326eeb8] absolute top-[7rem] left-[7rem] rounded-full z-[-10] blur-[5rem] opacity-40 p-10"
         ></div>
         <h1 className=" text-white text-3xl font-semibold">What our users say?</h1>
-        <button className=" text-white w-[10rem] h-[3rem] block bg-[#0328EE] text-center rounded-full text-sm font-bold mt-[2rem]">DOWNLOAD APP</button>
+        <button className=" text-white w-[10rem] h-[3rem] block bg-[#0328EE] hover:bg-[#031FB4] cursor-pointer text-center rounded-full text-sm font-bold mt-[2rem]">DOWNLOAD APP</button>
       </div>
       <SlidesScroll />
 
