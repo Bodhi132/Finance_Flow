@@ -10,7 +10,7 @@ async function getCryptoData(): Promise< Crypto[] > {
   const options = {
     headers: {
       'Content-Type': 'application/json',
-      'x-access-token': 'coinrankingfaa380787230ec92fb33fde09af64321f19928b46d18395b',
+      'x-access-token': process.env.COINRANKING_API_KEY,
     },
   };
   const res = await fetch(

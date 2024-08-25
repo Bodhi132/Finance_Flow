@@ -40,8 +40,8 @@ export default function Page() {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        client_id: 'RokToPWOZ04D5umqUWoskv8nDh0mDWo6siS_UI8TVyw',
-                        client_secret: 'h1PnZnqksVVb3IVKPyhC7yBDLBTHxO1a6VKNQPXzljA',
+                        client_id: process.env.NEXT_PUBLIC_PRODUCT_HUNT_CLIENT_ID,
+                        client_secret: process.env.NEXT_PUBLIC_PRODUCT_HUNT_CLIENT_SECRET,
                         grant_type: 'client_credentials',
                     }),
                 });

@@ -1,4 +1,5 @@
 import { DeviceFrameset } from "react-device-frameset";
+import RedirectButton from "./components/RedirectButton";
 import 'react-device-frameset/styles/marvel-devices.min.css';
 import { dm_Sans } from "./font";
 import FeaturedCompanies from "./components/FeaturedCompanies";
@@ -10,7 +11,9 @@ import NewsCard from "./components/NewsCard";
 import DownloadIosCard from "./components/DownloadIosCard";
 import DownloadAndroidCard from "./components/DownloadAndroidCard";
 
+
 export default function Home() {
+
 
   return (
     <div className="w-full overflow-x-hidden">
@@ -255,21 +258,21 @@ export default function Home() {
           <h1 className=" xl:text-3xl lg:text-2xl text-white font-semibold mb-[1rem]">Get started today</h1>
           <p className=" xl:text-sm lg:text-xs text-white font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <p className=" xl:text-sm lg:text-xs text-white font-light"> Feugiat nulla suspendisse tortor aene.</p>
-          <div className=" mt-[2rem] mb-[3rem] lg:mb-0 md:flex lg:block xl:space-y-[1rem] lg:space-y-[0.4rem] space-x-[4rem] lg:space-x-0 text-sm text-white font-light">
+          <div className=" mt-[2rem] mb-[3rem] lg:mb-0 md:flex lg:block xl:space-y-[1rem] space-y-[0.4rem] md:space-x-[4rem] lg:space-x-0 text-sm text-white font-light">
             <div className=" flex items-center space-x-[1rem]">
-              <div className=" xl:w-[3rem] xl:h-[3rem] md:w-[2.5rem] md:h-[2.5rem] rounded-2xl bg-[#0328EE] flex items-center justify-center">
+              <div className=" xl:w-[3rem] xl:h-[3rem] w-[2.5rem] h-[2.5rem] rounded-2xl bg-[#0328EE] flex items-center justify-center">
                 <img src="./download.png" alt="" className=" block" />
               </div>
               <p>Download App</p>
             </div>
             <div className=" flex items-center space-x-[1rem]">
-              <div className=" xl:w-[3rem] xl:h-[3rem] md:w-[2.5rem] md:h-[2.5rem] rounded-2xl bg-[#0328EE]  flex items-center justify-center">
+              <div className=" xl:w-[3rem] xl:h-[3rem] w-[2.5rem] h-[2.5rem] rounded-2xl bg-[#0328EE]  flex items-center justify-center">
                 <img src="./account.png" alt="" className="block" />
               </div>
               <p>Create a free account</p>
             </div>
             <div className=" flex items-center space-x-[1rem]">
-              <div className=" xl:w-[3rem] xl:h-[3rem] md:w-[2.5rem] md:h-[2.5rem] rounded-2xl bg-[#0328EE] flex items-center justify-center">
+              <div className=" xl:w-[3rem] xl:h-[3rem] w-[2.5rem] h-[2.5rem] rounded-2xl bg-[#0328EE] flex items-center justify-center">
                 <img src="./trading.png" alt="" className=" block" />
               </div>
               <p>Start trading</p>
@@ -282,7 +285,7 @@ export default function Home() {
       {/*News Section*/}
 
       <div className=" 2xl:px-28 xl:px-24 lg:px-16 px-10 mt-[5rem] space-y-[3rem] pb-5">
-        <div className={` flex md:flex-col lg:flex-row md:items-center md:justify-center lg:justify-between ${dm_Sans.className}`}>
+        <div className={`flex flex-col lg:flex-row md:items-center md:justify-center lg:justify-between ${dm_Sans.className}`}>
           <h1 className=" text-white font-semibold xl:text-3xl lg:text-2xl">Browse our latest news</h1>
           <div className=" text-white xl:text-sm lg:text-xs font-light md:text-center lg:text-left">
             <p>It&apos;s the place to launch your ideas and discover your next favorite product.</p>
@@ -295,7 +298,7 @@ export default function Home() {
           <NewsCard />
         </div>
         <div className="w-full flex justify-center">
-          <button className={`w-[15.1rem] h-[4.4rem] block text-white text-center rounded-full font-bold mt-[2rem] text-lg ${dm_Sans.className}`} style={{ backgroundColor: 'hsla(360, 100%, 100%, 0.1)' }}>VIEW ALL ARTICLES</button>
+         <RedirectButton />
         </div>
       </div>
 
