@@ -100,9 +100,6 @@ export default function Page() {
                 });
 
                 const data = await response.json();
-                console.log(data.data.posts.edges);
-                console.log(data.data.posts.edges[0].node);
-
 
                 setProducts(data.data.posts.edges);
                 setFeaturedNews(data.data.posts.edges[0].node);
@@ -199,7 +196,6 @@ export default function Page() {
                             }
                             else {
                                 if (ele.node.topics.edges.map((ele) => ele.node.name).includes(topic)) {
-                                    console.log(ele);
                                     return ele;
 
                                 }

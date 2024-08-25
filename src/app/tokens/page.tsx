@@ -16,6 +16,7 @@ async function getCryptoData(): Promise< Crypto[] > {
   const res = await fetch(
     'https://api.coinranking.com/v2/coins',options
   )
+  
   const data = await res.json()
   
   const coins:Crypto[] = data.data.coins.map((coin:any)=>({
